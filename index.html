@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrickX Systems</title>
+    <title>Brick X Systems</title>
     <style>
         body {
             margin: 0;
@@ -20,6 +20,7 @@
         .header {
             width: 100%;
             display: flex;
+            justify-content: space-between;
             align-items: center;
             padding: 20px;
             position: absolute;
@@ -33,6 +34,15 @@
         }
         .title {
             font-size: 2em;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            color: #5865F2;
+            text-decoration: none;
+            font-size: 1em;
         }
         .container {
             text-align: center;
@@ -98,14 +108,19 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://cdn.discordapp.com/attachments/1222607483701297192/1259301005976403998/8239599e63206cd6ba5a872d503f95a4-removebg-preview.png?ex=668b2ef4&is=6689dd74&hm=d28e8e40f69832c563cc54edf0737e6af07bda19ccb2caa18665c9b6ebccfe66&" alt="Logo" class="logo">
-        <div class="title">BrickX Systems</div>
+        <div>
+            <img src="https://cdn.discordapp.com/attachments/1222607483701297192/1259301005976403998/8239599e63206cd6ba5a872d503f95a4-removebg-preview.png?ex=668b2ef4&is=6689dd74&hm=d28e8e40f69832c563cc54edf0737e6af07bda19ccb2caa18665c9b6ebccfe66&" alt="Logo" class="logo">
+            <div class="title">BrickX Systems</div>
+        </div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
     </div>
     <div class="container">
-        <div class="typing-effect"><span>BrickX Systems is</span> <b>a bot that includes...</b></div>
-
+        <div class="typing-effect"><span>BrickX</span> <b>is a bot that includes...</b></div>
         <p><span id="changing-text"></span></p>
-<br>
         <div class="buttons">
             <a href="https://discord.com/oauth2/authorize?client_id=1259292185463881748&permissions=8&integration_type=0&scope=bot+applications.commands" class="button invite-button">Invite Bot</a>
             <a href="https://discord.gg/2UXAktQssj" class="button support-button">Support Server</a>
@@ -113,12 +128,12 @@
     </div>
     <div class="footer">
         &copy; 2024 BrickXSystems. All rights reserved.
-        <a href="/terms.html">Terms of Service</a> |
-        <a href="/privacy.html">Privacy Policy</a> 
+        <a href="terms.html">Terms of Service</a> |
+        <a href="privacy.html">Privacy Policy</a> 
     </div>
 
     <script>
-        const texts = ["Discord Moderation", "Roblox Moderation", "Shift Management", "and more!"];
+        const texts = ["Discord Moderation", "Roblox Moderation", "Shift Management", "and more!", "All. In. One."];
         let count = 0;
         let index = 0;
         let currentText = "";
@@ -135,7 +150,7 @@
             if (letter.length === currentText.length) {
                 count++;
                 index = 0;
-                setTimeout(typeChangingText, 2000);
+                setTimeout(typeChangingText, 2000); 
             } else {
                 setTimeout(typeChangingText, 100);
             }
